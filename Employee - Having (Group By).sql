@@ -18,6 +18,8 @@ ORDER BY "Total Titles" DESC;
 SELECT e.emp_no, count(s.salary) AS "salary changes"
 FROM employees AS e
 JOIN salaries AS s USING(emp_no)
+JOIN dept_emp as de USING(emp_no)
+WHERE dept_no like 'd005'
 GROUP BY e.emp_no
 HAVING count(s.salary) > 15
 ORDER BY "salary changes" DESC;
