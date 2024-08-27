@@ -19,7 +19,7 @@ CREATE OR REPLACE VIEW "bigbucks" AS
 SELECT DISTINCT e.emp_no, e.first_name, e.last_name
 FROM employees AS e
 JOIN salaries AS s USING(emp_no)
-WHERE s.salary > 80000
+WHERE s.salary > 80000   
 
 
 SELECT *
